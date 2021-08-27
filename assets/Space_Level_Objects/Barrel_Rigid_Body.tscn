@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/Space_Level_Objects/Metal_One.material" type="Material" id=1]
-[ext_resource path="res://assets/Space_Level_Objects/Metal_Three.material" type="Material" id=2]
-[ext_resource path="res://assets/Space_Level_Objects/Metal_Two.material" type="Material" id=3]
+[ext_resource path="res://RigidBody_hit_test.gd" type="Script" id=1]
+[ext_resource path="res://assets/Space_Level_Objects/Metal_One.material" type="Material" id=2]
+[ext_resource path="res://assets/Space_Level_Objects/Metal_Three.material" type="Material" id=3]
+[ext_resource path="res://assets/Space_Level_Objects/Metal_Two.material" type="Material" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -16,7 +17,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 98051,
 "index_count": 48,
-"material": ExtResource( 1 ),
+"material": ExtResource( 2 ),
 "name": "Metal_One",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -29,7 +30,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 98051,
 "index_count": 48,
-"material": ExtResource( 2 ),
+"material": ExtResource( 3 ),
 "name": "Metal_Three",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -42,7 +43,7 @@ surfaces/2 = {
 "blend_shape_data": [  ],
 "format": 98051,
 "index_count": 660,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "name": "Metal_Two",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -79,6 +80,7 @@ linear_velocity = Vector3( 0, 0, 0 )
 linear_damp = -1.0
 angular_velocity = Vector3( 0, 0, 0 )
 angular_damp = -1.0
+script = ExtResource( 1 )
 
 [node name="Barrel" type="MeshInstance" parent="." index="0"]
 layers = 1

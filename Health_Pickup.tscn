@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://assets/Gamemode_Objects/Metal_One.material" type="Material" id=1]
-[ext_resource path="res://assets/Gamemode_Objects/Metal_Two.material" type="Material" id=2]
-[ext_resource path="res://assets/Gamemode_Objects/Metal_Red.material" type="Material" id=3]
+[ext_resource path="res://HealthPickup.gd" type="Script" id=1]
+[ext_resource path="res://assets/Gamemode_Objects/Metal_One.material" type="Material" id=2]
+[ext_resource path="res://assets/Gamemode_Objects/Metal_Two.material" type="Material" id=3]
+[ext_resource path="res://assets/Gamemode_Objects/Metal_Red.material" type="Material" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -16,7 +17,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 98071,
 "index_count": 3036,
-"material": ExtResource( 1 ),
+"material": ExtResource( 2 ),
 "name": "Metal_One",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -29,7 +30,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 98071,
 "index_count": 1296,
-"material": ExtResource( 2 ),
+"material": ExtResource( 3 ),
 "name": "Metal_Two",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -42,7 +43,7 @@ surfaces/2 = {
 "blend_shape_data": [  ],
 "format": 98071,
 "index_count": 1122,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "name": "Metal_Red",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -61,7 +62,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 98071,
 "index_count": 468,
-"material": ExtResource( 1 ),
+"material": ExtResource( 2 ),
 "name": "Metal_One",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -74,7 +75,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 98071,
 "index_count": 396,
-"material": ExtResource( 3 ),
+"material": ExtResource( 4 ),
 "name": "Metal_Red",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -87,7 +88,7 @@ surfaces/2 = {
 "blend_shape_data": [  ],
 "format": 98071,
 "index_count": 288,
-"material": ExtResource( 2 ),
+"material": ExtResource( 3 ),
 "name": "Metal_Two",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -135,7 +136,9 @@ tracks/1/keys = {
 
 [node name="Health_Pickup" type="Spatial" index="0"]
 
+script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+kit_size = 0
 
 [node name="Holder" type="Spatial" parent="." index="0"]
 

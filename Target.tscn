@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/Gamemode_Objects/Metal_Two.material" type="Material" id=1]
-[ext_resource path="res://assets/Gamemode_Objects/Emissive_Orange.material" type="Material" id=2]
+[ext_resource path="res://Target.gd" type="Script" id=1]
+[ext_resource path="res://Broken_Target.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Gamemode_Objects/Metal_Two.material" type="Material" id=3]
+[ext_resource path="res://assets/Gamemode_Objects/Emissive_Orange.material" type="Material" id=4]
 
 [sub_resource type="ArrayMesh" id=1]
 
@@ -15,7 +17,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 98071,
 "index_count": 564,
-"material": ExtResource( 1 ),
+"material": ExtResource( 3 ),
 "name": "Metal_Two",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -28,7 +30,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 98071,
 "index_count": 384,
-"material": ExtResource( 2 ),
+"material": ExtResource( 4 ),
 "name": "Emissive_Orange",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -53,6 +55,8 @@ friction = 1.0
 bounce = 0.0
 constant_linear_velocity = Vector3( 0, 0, 0 )
 constant_angular_velocity = Vector3( 0, 0, 0 )
+script = ExtResource( 1 )
+destroyed_target = ExtResource( 2 )
 
 [node name="Target_Whole" type="MeshInstance" parent="Target" index="0"]
 

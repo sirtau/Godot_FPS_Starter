@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/GunMaterial.material" type="Material" id=1]
-[ext_resource path="res://Bullet_script.gd" type="Script" id=2]
+[ext_resource path="res://Bullet_script.gd" type="Script" id=1]
+[ext_resource path="res://assets/GunMaterial.material" type="Material" id=2]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.03, 0.03, 0.23 )
@@ -15,7 +15,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 98071,
 "index_count": 348,
-"material": ExtResource( 1 ),
+"material": ExtResource( 2 ),
 "name": "GunMaterial",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -23,7 +23,7 @@ surfaces/0 = {
 }
 
 [node name="Bullet" type="Spatial"]
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [node name="Area" type="Area" parent="."]
 input_ray_pickable = false
@@ -35,4 +35,4 @@ shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )
-material/0 = ExtResource( 1 )
+material/0 = ExtResource( 2 )
